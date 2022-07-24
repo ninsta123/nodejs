@@ -5,7 +5,7 @@ const Sequelize =  require("sequelize");
 const  sequelize =  require("./util/database")
 const Teacher = require("./util/models/teacher")
 const Student= require("./util/models/student")
-const PORT  =  process.env.PORT || 3000;
+const PORT  =  process.env.PORT || 8080;
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
