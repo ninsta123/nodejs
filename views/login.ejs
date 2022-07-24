@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REsult 20222</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="\css\index.css">
+    <link rel="stylesheet" href="\css\login.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="header-wrap">
+            <h1 class="site-hdr">Result Management System</h1>
+        </div>
+       <%  if(locals.msg) {%>
+        <h5 style="position: absolute; top: 20%;  margin: 0 auto !important; text-align: center;" class="text-danger">
+            <%= locals.msg %>
+        </h5>
+          <%}%>
+        <div class="main-content">          
+              <div class="main-form col-md-6 col-lg-4 col-sm-10 col-12">
+                  <h1>Login</h1>
+                  <form action="/login" method="post">
+                      <table>
+                          <tr>
+                              <td>user:</td>
+                              <td class="form-inp"> <input type="text" class="form-control" placeholder="Enter your user id" id="user" name="userEmail" minlength="4" maxlength="50" required></td>
+                          </tr>
+                          <tr>
+                              <td>Password:</td>
+                              <td class="form-inp">  <input type="password" class="form-control" placeholder="Enter your password" id="password" name="userPassword" minlength="4" maxlength="50" required></td>
+                          </tr>
+                         
+                      </table>
+                      <button type="submit" class="btn-submit">login</button>
+                  </form>
+              </div>   
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REsult 20222</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="\css\index.css">
+    <link rel="stylesheet" href="\css\login.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="header-wrap">
+            <h1 class="site-hdr">Result Management System</h1>
+        </div>
+        <%if(locals.msg){%>
+        <p style="width:100%;color: red; position :absolute ; top :20%; left:0; text-align:center;"><%=locals.msg%></locals.msg></p>
+        <%}%>
+        <div class="main-content">
+              <div class="main-form col-md-6 col-lg-4 col-sm-10 col-12">
+                  <h1>Result</h1>
+                  <form action="/result" method="post">
+                      <table>
+                          <tr>
+                              <td>Roll Number:</td>
+                              <td class="form-inp"> <input type="number" class="form-control" placeholder="Enter your user id" id="id" name="id"  required></td>
+                          </tr>
+                          <tr>
+                              <td>Name</td>
+                              <td class="form-inp">  <input type="text" class="form-control" placeholder="Enter your Name" id="name" name="name"  required></td>
+                          </tr>
+                         
+                      </table>
+                      <button type="submit" class="btn-submit">Get</button>
+                  </form>
+              </div>   
+        </div>
+    </div>
+</body>
+</html>

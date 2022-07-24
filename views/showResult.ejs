@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REsult 20222</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="\css\index.css">
+    <link rel="stylesheet" href="\css\add.css">
+    <style>
+        .main-form{
+            border:none !important;
+            
+        }
+        table{
+            margin: 0 auto;
+        }
+        td{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="header-wrap">
+            <h1 class="site-hdr">Result Management System</h1>
+        </div>
+        <form class="gobackfrm">
+            <input type="button" value="Go back!" onclick="history.back()">
+        </form>
+        <div class="main-content">
+        
+             
+              <div class="main-form col-md-6 col-lg-4 col-sm-10 col-12">
+                 
+                  
+                      <table>
+                        <tr>
+                            <td>Roll NO:</td>
+                            <td class="form-inp"><%= locals.item.dataValues.id%></td>
+                        </tr>
+                          <tr>
+                              <td>Name:</td>
+                              <td class="form-inp"><%= locals.item.dataValues.name%></td>
+                          </tr>
+                          <tr>
+                            <% var date = new Date(locals.item.dataValues.dob);
+                            year  =  date.getFullYear()
+                            month  =  date.getMonth()+1;
+                            dt  =  date.getDate();
+                            %>
+                              <td>DOB:</td>
+                              <td class="form-inp"><%=dt+"-"+month+"-"+year %></td>
+                          </tr>
+                          <tr>
+                            <td>Score:</td>
+                            <td class="form-inp"> <%= locals.item.dataValues.score%></td>
+                        </tr>
+                       
+                    </table>
+              </div>   
+        </div>
+    </div>
+</body>
+</html>

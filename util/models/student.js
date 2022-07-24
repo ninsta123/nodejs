@@ -1,0 +1,24 @@
+const Sequelize =  require("sequelize");
+const  sequelize =  require("../database");
+const Student =  sequelize.define("student", {
+id:{
+   type:Sequelize.INTEGER,
+   autoIncrement:true,
+   allowNull:false,
+   primaryKey:true
+},
+name:{
+type:Sequelize.STRING,
+allowNull:false
+},
+dob:{
+type:Sequelize.DATE,
+allowNull:false
+},
+score:{
+    type:Sequelize.INTEGER,
+    allowNull:false,
+ },
+});
+
+module.exports =  Student;

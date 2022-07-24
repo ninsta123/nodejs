@@ -1,0 +1,84 @@
+.main-content{
+    width:98% ;
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.main-form{
+    position: relative;
+    border:2px solid rgb(228, 228, 228);   
+    padding: 1em 1.3em;
+    border-radius:8px ;
+   
+}
+.main-form  h1 {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    font-size: 18px;
+    line-height: 1;
+    margin: -9px 0 0; 
+    background: #fff;
+    padding: 0 3px;
+    color: var(--hdr-background);
+  }
+  form{
+      margin: 0 auto;
+  }
+  .form-group{
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+  }
+  label{
+      padding: 0.2em;
+      white-space: nowrap;
+      background-color:rgb(219, 219, 219);
+      color: black;
+      
+  }
+  table{
+    border-collapse: separate;
+    border-spacing: 30px;
+  }
+  td{
+      margin: 30px;
+    text-align:  right;
+  }
+tr:last-child{
+  width:70% !important;
+}
+button[type="submit"]{
+
+  background: var(--hdr-background);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 12px;
+  border: 1px solid green;
+}
+button[type="reset"]{
+    background: transparent;
+    color: rgb(0, 0, 0);
+  padding: 5px 12px;
+  border-radius: 12px;
+}
+.form-inp{
+  width: 70% !important;
+}
+input[type="text"]{
+  width: 100% !important;
+}
+/** add.ejs page css**/
+.gobackfrm{
+  position: absolute;
+  top:5em;
+  left: 2em;
+}
+.gobackfrm>input{
+  background-color: transparent;
+  color: var(--hdr-background);
+  border: none;
+  text-decoration:underline;
+}
